@@ -53,7 +53,8 @@ void CIPLocationItem::SetIPInfo(const std::wstring& ip, const std::wstring& coun
         m_displayText = L"Failed";
     else
         // 格式：IP:CN，无空格
-        m_displayText = L"IP:" + (m_country.empty() ? L"Unknown" : m_country);
+        m_displayText = m_country.empty() ? L"Unknown" : m_country;
+
 }
 void CIPLocationItem::SetStatus(const std::wstring& status)
 {
